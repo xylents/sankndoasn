@@ -12,8 +12,7 @@ local CurrentCamera = Workspace.CurrentCamera
 
 local DaHoodSettings = {
     SilentAim = true,
-    Prediction = 0.157,
-    ShowFOV = true,
+    Prediction = 0.163,
 }
 getgenv().DaHoodSettings = DaHoodSettings
 
