@@ -56,19 +56,3 @@ RunService:BindToRenderStep("AimLock", 0, function()
         CurrentCamera.CFrame = CFrame.lookAt(CurrentCamera.CFrame.Position, Hit.Position)
     end
     end)
-
-
-local player = game.Players.LocalPlayer
-local mouse = player:GetMouse()
-
-mouse.KeyDown:Connect(function(key)
-    if key == "v" then
-        if Aiming.Enabled == false then
-        Aiming.Enabled = true
-        else
-        Aiming.Enabled = false
-        end
-    end
-end)
-
-
