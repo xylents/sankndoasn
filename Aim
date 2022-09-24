@@ -1,13 +1,13 @@
 local Toggled = false
-local KeyCode = 'x'
-
-
-function AA()
+local KeyCode = 't'
+local hip = 4.8
+local vel = -70
+function anti()
     local oldVelocity = game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity
-    game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(oldVelocity.X, -70, oldVelocity.Z)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(oldVelocity.X, vel, oldVelocity.Z)
     game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(oldVelocity.X, oldVelocity.Y, oldVelocity.Z)
-    game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(oldVelocity.X, -70, oldVelocity.Z)
-    game.Players.LocalPlayer.Character.Humanoid.HipHeight = 4.14
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(oldVelocity.X, vel, oldVelocity.Z)
+    game.Players.LocalPlayer.Character.Humanoid.HipHeight = hip
 end
 
 game:GetService('UserInputService').InputBegan:Connect(function(Key)
@@ -20,7 +20,7 @@ game:GetService('UserInputService').InputBegan:Connect(function(Key)
             Toggled = true
 
             while Toggled do
-                AA()
+                anti()
                 task.wait()
             end
         end
